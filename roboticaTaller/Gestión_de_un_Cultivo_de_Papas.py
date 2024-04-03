@@ -8,10 +8,11 @@ class VariedadDePapa:
         return f"Nombre: {self.nombre}, Ciclo de cultivo: {self.ciclo}, Producción estimada: {self.produccion}"
 
 class CultivoDePapas(VariedadDePapa):
-    def __init__(self, nombreVariedad, ciclo_de_cultivo, producionEstimada, fechaSiembra, fechaCosecha):
-        super().__init__(nombreVariedad, ciclo_de_cultivo, producionEstimada)
-        self.fechaSiembra = fechaSiembra
-        self.fechaCosecha = fechaCosecha
+    def __init__(self):
+        self.variedad = []
 
-    def __str__(self):
-        return f"{super().__str__()}, Fecha de siembra: {self.fechaSiembra}, Fecha de cosecha: {self.fechaCosecha}"
+    def agregarVariedad(self, nombreVariedad, ciclo_de_cultivo, producionEstimada):
+        self.variedad.append(VariedadDePapa(nombreVariedad, ciclo_de_cultivo, producionEstimada))
+
+
+
