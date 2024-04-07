@@ -1,0 +1,58 @@
+Objetivo: Desarrollar una simulación de crecimiento para un cultivo de papas,
+utilizando programación orientada a objetos.
+La simulación debe considerar factores como el clima y plagas para afectar el rendimiento del cultivo.
+
+Descripción:
+
+Se requiere implementar una clase SimulacionCultivo que modele el crecimiento de las papas y
+cómo diversos factores afectan su rendimiento. Los factores a considerar son:
+
+Clima: Días de sol, lluvia, y sequía. Cada uno afecta diferentemente el crecimiento.
+Plagas: Probabilidad de que ocurra una plaga que puede reducir la producción.
+
+La clase debe tener métodos para:
+
+Iniciar la simulación con un número dado de días.
+Registrar los efectos del clima y la probabilidad de plagas.
+Calcular el rendimiento final del cultivo basado en los factores mencionados.
+
+Requerimientos:
+
+Implementar la clase SimulacionCultivo.(listo)
+Utilizar números aleatorios para simular el clima y la ocurrencia de plagas.(listo)
+La clase debe ofrecer la flexibilidad para ajustar los parámetros que afectan el rendimiento
+(e.g., efecto de los días de sol en el crecimiento).
+Incluir un ejemplo de cómo ejecutar la simulación para un período de 120 días y cómo interpretar los resultados obtenidos.
+
+
+=================================================================================================
+para poder interpretar el rendimiento obtenido. El valor representaría la acumulación total
+del impacto positivo del clima favorable en el crecimiento de las papas durante el período de tiempo especificado.
+
+->Un rendimiento total alto indica que las condiciones favorables (como la presencia de sol o lluvia y la ausencia de plagas)
+contribuyeron significativamente al crecimiento de las papas durante la simulación.
+
+->Un rendimiento total bajo podría indicar que, a pesar de las condiciones favorables,
+otros factores pueden estar limitando el crecimiento de las papas, como la calidad del suelo, la disponibilidad de nutrientes
+y la presencia de plagas.
+
+bajo = 0 a 20%     [0<=x<=0.2]
+alto = 20%  a mas  [x>=0.2[
+
+
+
+======================================================================================================
+
+
+
+
+# crecimiento de la planta
+        # a favor de su crecimiento lluvia, sol y sin plaga
+        casos favorables solo si estan sin plaga y si esta con plaga se reduce en un 50% de su valor
+        lluvia = 1
+        sol = 1
+
+        # en contra del crecimiento de la planta sequia, con plaga
+        sequia = -1 --> no importa si esta con o sin plaga siempre sera un caso desfavorable
+        con plaga = -1
+

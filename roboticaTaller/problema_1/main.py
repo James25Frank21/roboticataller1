@@ -1,5 +1,5 @@
+from problema_1 import Gestión_de_un_Cultivo_de_Papas as gcp
 
-import Gestión_de_un_Cultivo_de_Papas as gcp
 if __name__ == "__main__":
     cultivo = gcp.CultivoDePapas()
 
